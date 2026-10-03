@@ -1,0 +1,794 @@
+@font-face {
+  font-family: "Dream Orphans";
+  src: url("fonts/dream-orphans-regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Vogue";
+  src: url("fonts/vogue-regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: #ffffff;
+  color: #464545;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 0 60px;
+  background-color: #ffffff;
+}
+
+.logo-link {
+  display: block;
+  flex: 0 0 auto;
+}
+
+.site-logo {
+  display: block;
+  width: 100px;
+  height: auto;
+}
+
+header nav {
+  position: absolute;
+  left: 50%;
+  display: flex;
+  gap: 30px;
+  transform: translateX(-50%);
+}
+
+header nav a {
+  color: #464545;
+  font-family: "Dream Orphans", serif;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  color: #a77d2f;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-left: auto;
+}
+
+.header-icons img {
+  display: block;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.menu-toggle {
+  display: none;
+  width: 34px;
+  height: 34px;
+  padding: 6px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 2px;
+  margin: 5px 0;
+  background-color: #464545;
+}
+
+.hero {
+  display: flex;
+  min-height: calc(100vh - 60px);
+  padding: 40px 60px 35px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0;
+  color: #464545;
+  font-family: "Dream Orphans", serif;
+  font-size: 125px;
+  font-weight: 400;
+  line-height: 1.05;
+  text-align: center;
+  text-shadow: 0 3px 4px rgba(0, 0, 0, 0.18);
+}
+
+.hero-brand {
+  margin: 0 0 24px;
+  color: #a77d2f;
+  background: linear-gradient(
+    110deg,
+    #8c6827 0%,
+    #d9b85f 35%,
+    #f2db8a 50%,
+    #ae8334 70%,
+    #8c6827 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.18));
+  font-family: "Vogue", serif;
+  font-size: 74px;
+  text-align: center;
+}
+
+.hero-glasses {
+  display: block;
+   width: 70%;
+  max-width: 1350px;
+  height: auto;
+  margin: 18px auto 0;
+}
+
+.hero-more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  margin: auto auto 0;
+  color: #444;
+  font-family: "Dream Orphans", sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.hero-more:hover {
+  color: #a77d2f;
+}
+
+.hero-more-icon {
+  display: block;
+  width: 35px;
+  height: auto;
+}
+
+.services {
+  padding: 130px 60px;
+  background-color: #f8f7f4;
+  text-align: center;
+}
+
+.services-intro {
+  margin-bottom: 65px;
+}
+
+.services-brand,
+.contact-brand {
+  margin: 0 0 10px;
+  color: #a77d2f;
+  font-family: "Vogue", serif;
+  font-size: 25px;
+  letter-spacing: 0.06em;
+}
+
+.services h2,
+.contact h2 {
+  margin: 0;
+  color: #464545;
+  font-family: "Vogue", serif;
+  font-size: 72px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.services-lead,
+.contact-lead {
+  margin: 18px 0 0;
+  color: #464545;
+  font-family: "Dream Orphans", serif;
+  font-size: 27px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  width: min(100%, 1040px);
+  margin: 0 auto;
+}
+
+.service-card {
+  min-height: 230px;
+  padding: 38px 45px;
+  border: 1px solid #d9b85f;
+  background-color: #ffffff;
+  text-align: left;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  box-shadow: 0 16px 30px rgba(70, 69, 69, 0.12);
+  transform: translateY(-7px);
+}
+
+.service-number {
+  display: block;
+  margin-bottom: 24px;
+  color: #a77d2f;
+  font-family: "Vogue", serif;
+  font-size: 28px;
+}
+
+.service-card h3 {
+  margin: 0 0 14px;
+  color: #464545;
+  font-family: "Dream Orphans", serif;
+  font-size: 38px;
+  font-weight: 400;
+}
+
+.service-card p {
+  max-width: 420px;
+  margin: 0;
+  color: #464545;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.services-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 58px;
+  padding: 15px 27px;
+  border: 1px solid #464545;
+  background-color: #464545;
+  color: #ffffff;
+  font-family: "Dream Orphans", serif;
+  font-size: 23px;
+  text-decoration: none;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.services-contact:hover {
+  background-color: #ffffff;
+  color: #464545;
+}
+
+.services-contact:focus-visible,
+.menu-toggle:focus-visible,
+header nav a:focus-visible,
+.hero-more:focus-visible,
+.contact-location:focus-visible,
+.contact-socials a:focus-visible,
+.contact-item a:focus-visible {
+  outline: 3px solid #a77d2f;
+  outline-offset: 4px;
+}
+
+.about {
+  padding: 140px 60px;
+  background-color: #ffffff;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 410px) minmax(0, 560px);
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.about-video-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 14;
+  overflow: hidden;
+  border-radius: 38px;
+  background-color: #f4f1e8;
+  box-shadow:
+    0 26px 55px rgba(70, 69, 69, 0.16),
+    0 0 65px rgba(217, 184, 95, 0.48);
+}
+
+.about-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-content {
+  max-width: 560px;
+}
+
+.about-brand {
+  margin: 0 0 12px;
+  color: #a77d2f;
+  font-family: "Vogue", serif;
+  font-size: 27px;
+  letter-spacing: 0.06em;
+}
+
+.about h2 {
+  margin: 0;
+  color: #464545;
+  font-family: "Dream Orphans", serif;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 1.15;
+  text-shadow: 0 3px 4px rgba(0, 0, 0, 0.12);
+}
+
+.about-text {
+  max-width: 500px;
+  margin: 30px 0 42px;
+  color: #464545;
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.about-values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.about-values div {
+  min-width: 115px;
+}
+
+.about-values span {
+  display: block;
+  margin-bottom: 7px;
+  color: #a77d2f;
+  font-family: "Vogue", serif;
+  font-size: 23px;
+}
+
+.about-values p {
+  margin: 0;
+  color: #464545;
+  font-family: "Dream Orphans", serif;
+  font-size: 25px;
+}
+
+.contact {
+  padding: 140px 60px 110px;
+  background-color: #f8f7f4;
+}
+
+.contact-intro {
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) minmax(300px, 1.15fr);
+  gap: 26px;
+  width: min(100%, 1040px);
+  margin: 0 auto;
+}
+
+.contact-details {
+  min-height: 360px;
+  padding: 46px;
+  border: 1px solid #d9b85f;
+  background-color: #ffffff;
+}
+
+.contact-kicker {
+  margin: 0 0 42px;
+  color: #a77d2f;
+  font-family: "Vogue", serif;
+  font-size: 27px;
+  letter-spacing: 0.06em;
+}
+
+.contact-list {
+  display: grid;
+  gap: 28px;
+  margin: 0;
+  font-style: normal;
+}
+
+.contact-item {
+  display: grid;
+  gap: 7px;
+}
+
+.contact-label {
+  color: #464545;
+  font-family: "Dream Orphans", serif;
+  font-size: 24px;
+}
+
+.contact-item a,
+.contact-item > span:last-child {
+  color: #464545;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  color: #a77d2f;
+}
+
+.contact-location {
+  position: relative;
+  display: flex;
+  min-height: 360px;
+  padding: 46px;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 78% 18%, rgba(217, 184, 95, 0.65) 0 2px, transparent 3px),
+    radial-gradient(circle at 63% 43%, rgba(217, 184, 95, 0.42) 0 3px, transparent 4px),
+    radial-gradient(circle at 31% 26%, rgba(217, 184, 95, 0.32) 0 2px, transparent 3px),
+    linear-gradient(135deg, #333232 0%, #464545 100%);
+  color: #ffffff;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-location::before {
+  position: absolute;
+  top: -110px;
+  right: -80px;
+  width: 250px;
+  height: 250px;
+  border: 1px solid rgba(217, 184, 95, 0.55);
+  border-radius: 50%;
+  content: "";
+}
+
+.contact-location:hover {
+  box-shadow: 0 16px 30px rgba(70, 69, 69, 0.18);
+  transform: translateY(-7px);
+}
+
+.contact-location-eyebrow,
+.contact-location strong,
+.contact-location-text,
+.contact-location-link {
+  position: relative;
+}
+
+.contact-location-eyebrow {
+  margin-bottom: 14px;
+  color: #d9b85f;
+  font-family: "Vogue", serif;
+  font-size: 23px;
+  letter-spacing: 0.06em;
+}
+
+.contact-location strong {
+  font-family: "Dream Orphans", serif;
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.contact-location-text {
+  max-width: 260px;
+  margin: 18px 0 30px;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.contact-location-link {
+  width: fit-content;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #d9b85f;
+  color: #ffffff;
+  font-family: "Dream Orphans", serif;
+  font-size: 23px;
+}
+
+.contact-socials {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 44px;
+  font-family: "Dream Orphans", serif;
+  font-size: 22px;
+}
+
+.contact-socials a {
+  color: #464545;
+  text-decoration: none;
+}
+
+.contact-socials a:hover {
+  color: #a77d2f;
+}
+
+.site-footer {
+  padding: 24px 60px;
+  background-color: #464545;
+  color: #ffffff;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+/* Mobilni i tablet prikaz */
+@media (max-width: 768px) {
+  header {
+    height: 60px;
+    min-height: 60px;
+    padding: 0 18px;
+    gap: 12px;
+  }
+
+  .site-logo {
+    width: 58px;
+  }
+
+  .header-icons {
+    gap: 9px;
+    margin-left: auto;
+    margin-right: 4px;
+  }
+
+  .header-icons img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  header nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 999;
+
+    display: flex;
+    width: 100%;
+    padding: 10px 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    transform: none;
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px rgba(70, 69, 69, 0.10);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+  }
+
+  header nav.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  header nav a {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  header nav a:hover {
+    background-color: #f8f7f4;
+  }
+
+  .hero {
+  position: relative;
+  display: flex;
+  min-height: calc(100svh - 60px);
+  padding: 24px 18px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  width: 100%;
+  transform: translateY(-10px);
+}
+
+.hero-brand {
+  width: 100%;
+  margin: 0 0 18px;
+  font-size: clamp(34px, 10vw, 52px);
+  text-align: center;
+}
+
+.hero h1 {
+  width: 100%;
+  margin: 0;
+  font-size: clamp(42px, 12vw, 70px);
+  line-height: 1.08;
+  text-align: center;
+}
+
+.hero-glasses {
+  display: block;
+  width: min(100%, 440px);
+  margin: 8px auto 0;
+}
+
+.hero-more {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin: 0;
+  padding: 0;
+  transform: translateX(-50%);
+  font-size: 18px;
+}
+
+  .hero-more-icon {
+    width: 28px;
+  }
+
+  .services,
+  .about,
+  .contact {
+    padding: 82px 18px;
+  }
+
+  .services-intro,
+  .contact-intro {
+    margin-bottom: 42px;
+  }
+
+  .services-brand,
+  .contact-brand,
+  .about-brand {
+    font-size: 20px;
+  }
+
+  .services h2,
+  .contact h2 {
+    font-size: clamp(46px, 14vw, 62px);
+  }
+
+  .services-lead,
+  .contact-lead {
+    font-size: 23px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .service-card {
+    min-height: auto;
+    padding: 30px 26px;
+  }
+
+  .service-number {
+    margin-bottom: 16px;
+    font-size: 24px;
+  }
+
+  .service-card h3 {
+    font-size: 32px;
+  }
+
+  .service-card p {
+    font-size: 15px;
+  }
+
+  .services-contact {
+    margin-top: 35px;
+    padding: 13px 20px;
+    font-size: 21px;
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 52px;
+  }
+
+  .about-video-wrap {
+    width: min(100%, 340px);
+    margin: 0 auto;
+    border-radius: 30px;
+  }
+
+  .about-content {
+    max-width: none;
+  }
+
+  .about h2 {
+    font-size: clamp(48px, 14vw, 66px);
+    line-height: 1.1;
+  }
+
+  .about-text {
+    margin: 24px 0 32px;
+    font-size: 16px;
+  }
+
+  .about-values {
+    gap: 24px;
+  }
+
+  .about-values p {
+    font-size: 22px;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .contact-details,
+  .contact-location {
+    min-height: auto;
+    padding: 32px 26px;
+  }
+
+  .contact-kicker {
+    margin-bottom: 30px;
+    font-size: 23px;
+  }
+
+  .contact-location {
+    min-height: 320px;
+  }
+
+  .contact-location strong {
+    font-size: clamp(42px, 13vw, 55px);
+  }
+
+  .contact-socials {
+    flex-wrap: wrap;
+    margin-top: 34px;
+    font-size: 20px;
+  }
+
+  .site-footer {
+    padding: 22px 18px;
+  }
+}
